@@ -1,15 +1,15 @@
 import React from "react";
-import { primaryButton, secondaryButton } from "./button.css";
+import { primaryButton, secondaryButton } from "./styles.css";
 
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  primary?: boolean;
+  secondary?: boolean;
   /**
    * Button contents
    */
-  label: string;
+  children: string;
   /**
    * Optional click handler
    */
@@ -19,11 +19,16 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary = false, label, ...props }: ButtonProps) => {
-  const mode = primary ? primaryButton : secondaryButton;
+export const Button = ({
+  secondary = false,
+  children,
+  ...props
+}: ButtonProps) => {
+  const mode = secondary ? secondaryButton : primaryButton;
+
   return (
     <button type="button" className={mode} {...props}>
-      {label}
+      {children}
     </button>
   );
 };
