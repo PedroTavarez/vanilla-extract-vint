@@ -1,9 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { RefereningDiv } from ".";
 
-const Template: ComponentStory<typeof RefereningDiv> = (args) => (
-  <RefereningDiv {...args} />
-);
+const Template: ComponentStory<typeof RefereningDiv> = () => <RefereningDiv />;
 
 export default {
   title: "Lessons/1.1: Referencing",
