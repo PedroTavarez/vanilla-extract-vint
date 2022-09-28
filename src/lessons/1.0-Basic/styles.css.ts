@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { vars } from "@/styles/theme.css";
+import { COLORS } from "@/styles/tokens/colors";
 
 const baseButton = style({
   alignItems: "center",
@@ -7,7 +7,7 @@ const baseButton = style({
   borderRadius: "0.125rem",
   cursor: "pointer",
   display: "inline-flex",
-  fontFamily: vars.fonts.body,
+  fontFamily: "'Nunito Sans',sans-serif",
   fontSize: "0.875rem",
   fontWeight: "400",
   height: "38px",
@@ -20,10 +20,10 @@ const baseButton = style({
 export const primaryButton = style([
   baseButton,
   {
-    color: vars.colors.text.normal,
-    backgroundColor: vars.colors.buttonPrimary,
+    color: COLORS.BLUSH_50,
+    backgroundColor: COLORS.BLUSH_500,
     ":hover": {
-      backgroundColor: vars.colors.buttonPrimaryHover,
+      backgroundColor: COLORS.BLUSH_600,
     },
   },
 ]);
@@ -31,10 +31,10 @@ export const primaryButton = style([
 export const secondaryButton = style([
   baseButton,
   {
-    color: vars.globalColors.gray.textColorOnPrimary,
-    backgroundColor: vars.globalColors.gray.primaryColor,
+    color: COLORS.GRAY_900,
+    backgroundColor: COLORS.GRAY_300,
     ":hover": {
-      backgroundColor: vars.globalColors.gray.primaryColorHover,
+      backgroundColor: COLORS.GRAY_200,
     },
   },
 ]);

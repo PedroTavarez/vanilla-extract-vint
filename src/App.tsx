@@ -34,9 +34,13 @@ function App() {
           </a>
         </div>
         <h1>Vite + React + Vanilla Extract</h1>
-        <Button onClick={() => setIsDarkTheme(!isDarkTheme)}>
-          Switch Theme
-        </Button>
+        <section
+          style={{ display: "flex", flexDirection: "column", gap: "16px" }}
+        >
+          <Button onClick={() => setIsDarkTheme(!isDarkTheme)}>
+            Switch Theme
+          </Button>
+        </section>
       </div>
     </div>
   );

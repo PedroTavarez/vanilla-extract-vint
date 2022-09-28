@@ -43,6 +43,7 @@ const root = createGlobalTheme("#app", {
       textColor: COLORS.GRAY_900,
       textColorOnPrimary: COLORS.GRAY_50,
     },
+    white: COLORS.WHITE,
   },
   space: {
     small: "8px",
@@ -55,9 +56,9 @@ const root = createGlobalTheme("#app", {
 });
 
 const colors = createThemeContract({
-  primary: null,
-  secondary: null,
   background: null,
+  buttonPrimary: null,
+  buttonPrimaryHover: null,
   text: {
     gen: null,
     normal: null,
@@ -66,9 +67,9 @@ const colors = createThemeContract({
 });
 
 export const lightTheme = createTheme(colors, {
-  primary: root.globalColors.blush.primaryColor,
-  secondary: root.globalColors.gray.primaryColor,
   background: COLORS.WHITE,
+  buttonPrimary: root.globalColors.blush.primaryColor,
+  buttonPrimaryHover: root.globalColors.blush.primaryColorHover,
   text: {
     gen: "#000",
     normal: root.globalColors.blush.textColorOnPrimary,
@@ -77,9 +78,9 @@ export const lightTheme = createTheme(colors, {
 });
 
 export const darkTheme = createTheme(colors, {
-  primary: root.globalColors.gray.primaryColor,
-  secondary: root.globalColors.gray.primaryColorHover,
   background: root.globalColors.black.primaryColor,
+  buttonPrimary: COLORS.WHITE,
+  buttonPrimaryHover: root.globalColors.gray.primaryColorHover,
   text: {
     gen: "#FFF",
     normal: root.globalColors.gray.textColorOnPrimary,

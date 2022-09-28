@@ -1,4 +1,5 @@
 import * as classNames from "./styles.css";
+import { Button } from "../1.0-Basic";
 
 interface ButtonProps {
   /**
@@ -18,18 +19,10 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
-  secondary = false,
-  children,
-  ...props
-}: ButtonProps) => {
-  const mode = secondary
-    ? classNames.secondaryButton
-    : classNames.primaryButton;
-
+export const RefereningDiv = ({ children, ...props }: ButtonProps) => {
   return (
-    <button {...props} type="button" className={mode}>
-      {children}
-    </button>
+    <div {...props} className={classNames.parent}>
+      <button className={classNames.child}>Color</button>
+    </div>
   );
 };
