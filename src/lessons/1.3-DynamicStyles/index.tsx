@@ -1,5 +1,5 @@
-import { COLORS } from "../../styles/tokens/colors";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
+import { COLORS } from "@/styles/tokens/colors";
 import { container, background } from "./styles.css";
 
 interface DynamicContainerProps {

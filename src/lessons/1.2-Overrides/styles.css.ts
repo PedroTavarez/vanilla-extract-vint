@@ -1,5 +1,5 @@
-import { COLORS } from "@/styles/tokens/colors";
 import { style } from "@vanilla-extract/css";
+import { COLORS } from "@/styles/tokens/colors";
 
 export const flexRow = style({
   display: "flex",
